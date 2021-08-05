@@ -69,11 +69,12 @@ const spacing = {
   s: "0.5rem",
   m: "1rem",
   l: "2rem",
-  xl: "4rem",
+  xl: "3rem",
   xxl: "8rem",
 };
 
 export const images = {
+  xxs:"44px",
   xs: "0.875rem",
   s: "4rem",
   m: "8rem",

@@ -5,6 +5,8 @@ import SideBarProfile from "../SideBarProfile";
 import Header from "../Header";
 import Portfolio from "../../views/Portfolio";
 import Resume from "../../views/Resume";
+import SkillsAndLanguages from "../../views/SkillsAndLanguages";
+import Experience from "../../views/Experience";
 import Footer from "../Footer";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -23,6 +25,12 @@ export const App = () => {
               <Switch>
                 <Route path="/resume">
                   <Resume />
+                </Route>
+                <Route path="/skills">
+                  <SkillsAndLanguages />
+                </Route>
+                <Route path="/experience">
+                  <Experience />
                 </Route>
                 <Route path="/">
                   <Portfolio />

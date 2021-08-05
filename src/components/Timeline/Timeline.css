@@ -21,7 +21,7 @@
 
 .headerDot {
   color: black !important;
-  background-color: #4cc9f0;
+  background-color: #F72585;
   font-size: small !important;
   padding: 10px !important;
 }
@@ -30,7 +30,7 @@
 
 .timelineDot {
   color: black !important;
-  border-color: #4cc9f0;
+  border-color: #F72585;
   width: 5px;
   height: 5px;
   padding: 2px !important;
@@ -41,10 +41,10 @@
 }
 .headerDot > .MuiSvgIcon-root {
   font-size: 1.2rem;
-  color: darkslategrey;
+  color:rgb(242, 240, 240);
 }
 .seperatorStyling {
-  padding-left: 0.4rem !important;
+  padding-left: 1rem !important;
 }
 .timelineContent {
   padding-top: 0px !important;
