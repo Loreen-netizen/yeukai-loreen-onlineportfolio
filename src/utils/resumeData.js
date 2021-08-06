@@ -10,12 +10,12 @@ export const RESUME_DATA = {
   Address: "54 Lourens Street Somerset West, Cape Town",
 
   socials: {
-    linkedIn: {
+    LinkedIn: {
       link: "https://www.linkedin.com/in/yeukai-loreen-muusha-158146125/",
       text: "My Linked In",
       icon: <LinkedInIcon />,
     },
-    gitHub: {
+    GitHub: {
       link: "https://github.com/Loreen-netizen",
       text: "My GitHub",
       icon: <GitHubIcon />,

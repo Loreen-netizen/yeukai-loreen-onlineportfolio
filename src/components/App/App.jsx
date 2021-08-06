@@ -8,18 +8,19 @@ import Resume from "../../views/Resume";
 import SkillsAndLanguages from "../../views/SkillsAndLanguages";
 import Experience from "../../views/Experience";
 import Footer from "../Footer";
+import "./App.css"
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export const App = () => {
   return (
     <StylesProvider injectFirst>
-      <Container>
+      <Container className="top_60">
         <Grid container>
           <Grid item xs={12} sm={12} md={4} lg={3}>
             <SideBarProfile />
           </Grid>
-          <Grid item xs>
+          <Grid item xs style={{backgroundColor:"green"}}>
             <Header />
             <Router>
               <Switch>

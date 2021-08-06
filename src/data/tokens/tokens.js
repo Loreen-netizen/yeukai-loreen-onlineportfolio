@@ -1,16 +1,14 @@
 const colors = {
-  black: "0, 0, 0",
-  white: "255, 255, 255",
+  black: "black",
+  white: "rgb(242, 240, 240)",
   vividSkyBlue: "#4CC9F0",
+  flickrPink: "#F72585",
 };
 
 const opacity = {
   none: "0",
   subtler: "10%",
-  subtle: "25%",
-  medium: "50%",
-  strong: "75%",
-  stronger: "90%",
+  subtle: "75%",
   solid: "100%",
 };
 
