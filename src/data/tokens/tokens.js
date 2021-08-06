@@ -48,20 +48,7 @@ const radius = {
   circle: "50%",
 };
 
-const highlights = {
-  s: {
-    size: "0.875rem",
-  },
-  m: {
-    size: "1rem",
-  },
-  l: {
-    size: "1,125rem",
-  },
-  xl: {
-    size: "3rem",
-  },
-};
+
 const spacing = {
   xs: "0.25rem",
   s: "0.5rem",

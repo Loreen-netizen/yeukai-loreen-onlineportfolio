@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Icon} from "@material-ui/core";
+import {Button} from "@material-ui/core";
 import styled from "styled-components";
 import tokens from "../../data/tokens"
 import "./Button.css"
@@ -19,9 +19,7 @@ const Btn = styled(Button)`
     outline: none;
   }
 `;
-const Span= styled.span`
 
-`
 const IconDiv = styled.div`
   color: ${tokens.colors.black};
   background: ${tokens.colors.white};

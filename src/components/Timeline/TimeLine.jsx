@@ -50,9 +50,6 @@ const StyledTimelineContent = styled(TimelineContent)`
   }
 `;
 
-
-
-
 export const TimeLine = ({ title, children, icon }) => {
   return (
     <StyledTimeline>
@@ -75,6 +72,7 @@ export const TimeLine = ({ title, children, icon }) => {
 
 export const CustomTimeLineSeperator = () => {
   return (
+    
     <TimelineSeparator>
       <StyledTimelineDot variant="outlined" />
       <TimelineConnector />

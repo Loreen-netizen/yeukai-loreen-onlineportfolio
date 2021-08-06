@@ -20,9 +20,9 @@ export const App = () => {
           <Grid item xs={12} sm={12} md={4} lg={3}>
             <SideBarProfile />
           </Grid>
-          <Grid item xs style={{backgroundColor:"green"}}>
-            <Header />
+          <Grid item xs>
             <Router>
+              <Header />
               <Switch>
                 <Route path="/resume">
                   <Resume />

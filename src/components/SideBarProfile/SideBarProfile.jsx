@@ -3,6 +3,7 @@ import { Typography } from "@material-ui/core";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import CustomButton from "../CustomButton";
 import GetAppSharpIcon from "@material-ui/icons/GetAppSharp";
+import uuid from "react-uuid";
 
 import tokens from "../../data/tokens";
 import styled from "styled-components";
@@ -137,6 +138,7 @@ export const SideBarProfile = () => {
           {Object.keys(RESUME_DATA.socials).map((key) => {
             return (
               <CustomTimeLineItem
+                key={uuid()}
                 title={key}
                 text={RESUME_DATA.socials[key].text}
                 link={RESUME_DATA.socials[key].link}
