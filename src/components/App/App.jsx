@@ -16,7 +16,7 @@ export const App = () => {
   return (
     <StylesProvider injectFirst>
       <Container className="top_60">
-        <Grid container>
+        <Grid container spacing={7}>
           <Grid item xs={12} sm={12} md={4} lg={3}>
             <SideBarProfile />
           </Grid>
