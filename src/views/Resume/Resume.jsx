@@ -1,13 +1,23 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { RESUME_DATA } from "../../utils/resumeData";
-import { EDUCATION_MAP } from "../../utils/skillsAndLanguages";
-import  {CustomTimeline, TimeLine} from "../../components/Timeline";
+import {
+  EDUCATION_MAP,
+  WORK_EXPERIENCE_MAP,
+} from "../../utils/skillsAndLanguages";
+import { CustomTimeline, TimeLine } from "../../components/Timeline";
+import TimelineItem from "@material-ui/lab/TimelineItem";
 import WorkOutlineOutlinedIcon from "@material-ui/icons/WorkOutlineOutlined";
-import "./Resume.css"
+import "./Resume.css";
 import { CustomTimeLineSeperator } from "../../components/Timeline/TimeLine";
+import TimelineContent from "@material-ui/lab/TimelineContent";
+import styled from "styled-components";
 
 
+const StyledWorkOutlineOutlinedIcon = styled(WorkOutlineOutlinedIcon)`
+&&{
+    color:white;
+}`;
 export const Resume = () => {
   return (
     <>
@@ -37,14 +47,56 @@ export const Resume = () => {
         <Grid container>
           {/* experience */}
           <Grid item sm={12} md={6}>
-<TimeLine title="Work Experience"
-icon={<WorkOutlineOutlinedIcon/>}
-></TimeLine>
+            <TimeLine
+              title="Work Experience"
+              icon={<StyledWorkOutlineOutlinedIcon />}
+            >
+              {WORK_EXPERIENCE_MAP.map((workExperience) => {
+                return (
+                  <TimelineItem>
+                    <CustomTimeLineSeperator />
+                    <TimelineContent>
+                      <Typography>{workExperience.title}</Typography>
+                      <Typography variant="caption">
+                        {workExperience.date}
+                      </Typography>
+                      <Typography variant="body2">
+                        {workExperience.description}
+                      </Typography>
+                    </TimelineContent>
+                  </TimelineItem>
+                );
+              })}
+            </TimeLine>
           </Grid>
 
-
           {/* Education */}
-          <Grid item sm={12} md={6}></Grid>
+          <Grid item sm={12} md={6}>
+            <TimeLine
+              title="Work Experience"
+              icon={<StyledWorkOutlineOutlinedIcon />}
+            >
+              {EDUCATION_MAP.map((education) => {
+                return (
+                  <TimelineItem>
+                    <CustomTimeLineSeperator />
+                    <TimelineContent>
+                      <Typography>{education.name}</Typography>
+                      <Typography variant="body2">
+                        {education.location}
+                      </Typography>
+                      <Typography variant="caption">
+                        {education.year}
+                      </Typography>
+                      <Typography variant="body2">
+                        {education.description}
+                      </Typography>
+                    </TimelineContent>
+                  </TimelineItem>
+                );
+              })}
+            </TimeLine>
+          </Grid>
         </Grid>
       </Grid>
 
