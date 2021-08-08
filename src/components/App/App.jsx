@@ -6,7 +6,6 @@ import Header from "../Header";
 import Portfolio from "../../views/Portfolio";
 import Resume from "../../views/Resume";
 import SkillsAndLanguages from "../../views/SkillsAndLanguages";
-import Experience from "../../views/Experience";
 import Footer from "../Footer";
 import "./App.css"
 
@@ -30,9 +29,6 @@ export const App = () => {
                   </Route>
                   <Route path="/skills">
                     <SkillsAndLanguages />
-                  </Route>
-                  <Route path="/experience">
-                    <Experience />
                   </Route>
                   <Route path="/">
                     <Resume />

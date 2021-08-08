@@ -105,14 +105,6 @@ export const Header = (props) => {
           >
             Portfolio
           </StyledNavLink>
-
-          {/* Experience */}
-          <StyledNavLink
-            href="/experience"
-            active={pathName === "/experience" ? true : false}
-          >
-            Experience
-          </StyledNavLink>
         </StyledNav>
         <StyledSocialsDiv>
           {Object.keys(RESUME_DATA.socials).map((socialMedia) => {

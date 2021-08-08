@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { RESUME_DATA } from "../../utils/resumeData";
 import {
@@ -8,17 +8,45 @@ import {
 import { CustomTimeline, TimeLine } from "../../components/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import WorkOutlineOutlinedIcon from "@material-ui/icons/WorkOutlineOutlined";
+import SchoolOutlinedIcon from "@material-ui/icons/SchoolOutlined";
 import "./Resume.css";
 import { CustomTimeLineSeperator } from "../../components/Timeline/TimeLine";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import styled from "styled-components";
 
-
 const StyledWorkOutlineOutlinedIcon = styled(WorkOutlineOutlinedIcon)`
-&&{
-    color:white;
-}`;
+  && {
+    color: white;
+  }
+`;
+const StyledSchoolOutlinedIcon = styled(SchoolOutlinedIcon)`
+  && {
+    color: white;
+  }
+`;
+const SeeMoreButton = styled.button`
+  background: none;
+  color: #fb89bc;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+`;
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: #fb89bc;
+  font-size: 12px;
+`;
+
 export const Resume = () => {
+  const [displayText, setDisplayText] = useState("none");
+  const [btnText, setBtnText] = useState("Read More...");
+
+  const updateDisplayText = () => {
+    displayText === "none" ? setDisplayText("inline") : setDisplayText("none");
+    btnText === "Read More..."
+      ? setBtnText("Read Less")
+      : setBtnText("Read More...");
+  };
   return (
     <>
       {/* About Me */}
@@ -61,8 +89,19 @@ export const Resume = () => {
                         {workExperience.date}
                       </Typography>
                       <Typography variant="body2">
-                        {workExperience.description}
+                        {workExperience.description1}
+
+                        <span style={{ display: displayText }}>
+                          {workExperience.description2}
+                        </span>
                       </Typography>
+                      <SeeMoreButton
+                        onClick={() => {
+                          updateDisplayText();
+                        }}
+                      >
+                        {btnText}
+                      </SeeMoreButton>
                     </TimelineContent>
                   </TimelineItem>
                 );
@@ -72,10 +111,7 @@ export const Resume = () => {
 
           {/* Education */}
           <Grid item sm={12} md={6}>
-            <TimeLine
-              title="Work Experience"
-              icon={<StyledWorkOutlineOutlinedIcon />}
-            >
+            <TimeLine title="Education" icon={<StyledSchoolOutlinedIcon />}>
               {EDUCATION_MAP.map((education) => {
                 return (
                   <TimelineItem>
@@ -87,6 +123,14 @@ export const Resume = () => {
                       </Typography>
                       <Typography variant="caption">
                         {education.year}
+                      </Typography>
+                      <Typography variant="body2">
+                        <StyledLink
+                          href={education.publications}
+                          target="_blank"
+                        >
+                          {education.publicationsTitle}
+                        </StyledLink>
                       </Typography>
                       <Typography variant="body2">
                         {education.description}
