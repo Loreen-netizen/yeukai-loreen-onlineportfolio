@@ -1,7 +1,10 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { RESUME_DATA } from "../../utils/resumeData";
+import  {CustomTimeline, TimeLine} from "../../components/Timeline";
+import WorkOutlineOutlinedIcon from "@material-ui/icons/WorkOutlineOutlined";
 import "./Resume.css"
+import { CustomTimeLineSeperator } from "../../components/Timeline/TimeLine";
 
 export const Resume = () => {
   return (
@@ -23,6 +26,25 @@ export const Resume = () => {
 
       {/* Education And Experience */}
       <Grid container className="section"></Grid>
+      <Grid item className="section_title mb_30">
+        <span className="title_span"></span>
+        <h6 className="title_text">Resume</h6>
+      </Grid>
+
+      <Grid item xs={12}>
+        <Grid container>
+          {/* experience */}
+          <Grid item sm={12} md={6}>
+<TimeLine title="Work Experience"
+icon={<WorkOutlineOutlinedIcon/>}
+></TimeLine>
+          </Grid>
+
+
+          {/* Education */}
+          <Grid item sm={12} md={6}></Grid>
+        </Grid>
+      </Grid>
 
       {/* Skills */}
       <Grid container className="section"></Grid>

@@ -27,7 +27,13 @@ const StyledHeaderDot = styled(TimelineDot)`
     background-color: #f72585;
     font-size: small;
     padding: 10px;
+    margin-left:-18px;
   }
+`;
+const StyledTimelineConnector = styled(TimelineConnector)`
+&&{
+  margin-left: -15px;
+}
 `;
 const StyledTimelineDot = styled(TimelineDot)`
   && {
@@ -58,25 +64,25 @@ export const TimeLine = ({ title, children, icon }) => {
         <TimelineSeparator>
           <StyledHeaderDot>{icon}</StyledHeaderDot>
 
-          <TimelineConnector />
+          <StyledTimelineConnector />
         </TimelineSeparator>
         <StyledTimelineContent>
           <StyledTypography variant="h6">{title}</StyledTypography>
         </StyledTimelineContent>
       </FirstItem>
       {children}
-      <CustomTimeLineSeperator />
     </StyledTimeline>
   );
 };
 
 export const CustomTimeLineSeperator = () => {
   return (
-    
-    <TimelineSeparator>
-      <StyledTimelineDot variant="outlined" />
-      <TimelineConnector />
-    </TimelineSeparator>
+    <TimelineItem>
+      <TimelineSeparator>
+        <StyledTimelineDot variant="outlined" />
+        <TimelineConnector />
+      </TimelineSeparator>
+    </TimelineItem>
   );
 };
 
