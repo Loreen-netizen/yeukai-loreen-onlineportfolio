@@ -1,17 +1,31 @@
-import React from 'react'
+import React from "react";
+import { Grid, Typography } from "@material-ui/core";
+import { RESUME_DATA } from "../../utils/resumeData";
 
 export const Resume = () => {
-    return (
-        <div>
-          <p>
-              RESUME Lorem ipsum dolor sit amet consectetur
-               adipisicing elit. Tenetur qui quas quaerat similique nisi corporis
-                odio debitis voluptate exercitationem, animi eligendi. Soluta 
-                provident
-               laborum debitis accusantium praesentium eius nihil impedit.
-              </p>  
-        </div>
-    )
-}
+  return (
+    <>
+      {/* About Me */}
+      <Grid container>
+        <Grid item xs={12}>
+          <span></span>
+          <Typography variant="h6">About Me</Typography>
+        </Grid>
+        <Grid item xs={12}>
+          {RESUME_DATA.AboutMe}
+        </Grid>
+      </Grid>
+
+      {/* Education And Experience */}
+      <Grid container></Grid>
+
+      {/* Skills */}
+      <Grid container></Grid>
+
+      {/* Contact */}
+      <Grid container></Grid>
+    </>
+  );
+};
 
 export default Resume;

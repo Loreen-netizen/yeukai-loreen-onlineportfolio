@@ -23,20 +23,22 @@ export const App = () => {
           <Grid item xs>
             <Router>
               <Header />
-              <Switch>
-                <Route path="/resume">
-                  <Resume />
-                </Route>
-                <Route path="/skills">
-                  <SkillsAndLanguages />
-                </Route>
-                <Route path="/experience">
-                  <Experience />
-                </Route>
-                <Route path="/">
-                  <Portfolio />
-                </Route>
-              </Switch>
+              <div className="main_content container_shadow">
+                <Switch>
+                  <Route path="/portfolio">
+                    <Portfolio />
+                  </Route>
+                  <Route path="/skills">
+                    <SkillsAndLanguages />
+                  </Route>
+                  <Route path="/experience">
+                    <Experience />
+                  </Route>
+                  <Route path="/">
+                    <Resume />
+                  </Route>
+                </Switch>
+              </div>
             </Router>
             <Footer />
           </Grid>

@@ -90,19 +90,20 @@ export const Header = (props) => {
           <StyledNavLink href="/" active={pathName === "/" ? true : false}>
             Resume
           </StyledNavLink>
-          {/* Porfolio link */}
-          <StyledNavLink
-            href="/portfolio"
-            active={pathName === "/portfolio" ? true : false}
-          >
-            Portfolio
-          </StyledNavLink>
+
           {/* Skills */}
           <StyledNavLink
             href="/skills"
             active={pathName === "/skills" ? true : false}
           >
             Skills
+          </StyledNavLink>
+          {/* Porfolio link */}
+          <StyledNavLink
+            href="/portfolio"
+            active={pathName === "/portfolio" ? true : false}
+          >
+            Portfolio
           </StyledNavLink>
 
           {/* Experience */}

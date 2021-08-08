@@ -1,5 +1,7 @@
 
 export const LANGUAGES_MAP = [
+  { name: "TypeScript", logo_src: `${process.env.PUBLIC_URL}/images/ts.png` },
+  { name: "MaterialUI", logo_src: `${process.env.PUBLIC_URL}/images/mui.png` },
   { name: "ReactJS", logo_src: `${process.env.PUBLIC_URL}/images/reactjs.png` },
   { name: "NodeJS", logo_src: `${process.env.PUBLIC_URL}/images/nodejs.png` },
   {
