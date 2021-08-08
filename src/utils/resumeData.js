@@ -9,16 +9,7 @@ export const RESUME_DATA = {
   DateOfBirth: "23-03-1992",
   Address: "54 Lourens Street Somerset West, Cape Town",
 
-  AboutMe: `I have risen to the challenge of taking a different career path than I had initially imagined
-          and learning a new skill altogether. As a Biochemist in the software engineering field, I feel I have
-          an edge in how I approach problem solving. This has increased my confidence in my ability to learn ANYTHING.
-          It has also given me the boldness of knowing that any skill can be mastered, nothing is beyond reach.
-          My career goal is to gain a role which allows me to further my
-          knowledge and skills, granting me new opportunities and broadening my
-          horizon. I enjoy coding because I love the process of conceptualising new solutions
-           that make life easier for people. I enjoy the
-          challenge of problem solving, transforming data and using my research and development
-          skills to solve daily challenges.`,
+  AboutMe: `I have risen to the challenge of taking a different career path than I had initially imagined and learning a new skill altogether. As a Biochemist in the software engineering field, I feel I have an edge in how I approach problem solving. This has increased my confidence in my ability to learn ANYTHING. It has also given me the boldness of knowing that any skill can be mastered, nothing is beyond reach. My career goal is to gain a role which allows me to further my knowledge and skills, granting me new opportunities and broadening my horizon. I enjoy coding because I love the process of conceptualising new solutions that make life easier for people. I enjoy the challenge of problem solving, transforming data and using my research and development skills to solve daily challenges.`,
 
   socials: {
     LinkedIn: {

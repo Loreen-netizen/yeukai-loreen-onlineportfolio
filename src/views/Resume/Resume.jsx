@@ -1,29 +1,32 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { RESUME_DATA } from "../../utils/resumeData";
+import "./Resume.css"
 
 export const Resume = () => {
   return (
     <>
       {/* About Me */}
-      <Grid container>
-        <Grid item xs={12}>
-          <span></span>
-          <Typography variant="h6">About Me</Typography>
+      <Grid container className="section pb_45">
+        <Grid item className="section_title mb_30">
+          <span className= "title_span"></span>
+          <h6 className="title_text">About Me</h6>
         </Grid>
         <Grid item xs={12}>
-          {RESUME_DATA.AboutMe}
+          <Typography variant="body2" className="aboutme_text">
+            {RESUME_DATA.AboutMe}
+          </Typography>
         </Grid>
       </Grid>
 
       {/* Education And Experience */}
-      <Grid container></Grid>
+      <Grid container className="section"></Grid>
 
       {/* Skills */}
-      <Grid container></Grid>
+      <Grid container className="section"></Grid>
 
       {/* Contact */}
-      <Grid container></Grid>
+      <Grid container className="section"></Grid>
     </>
   );
 };
