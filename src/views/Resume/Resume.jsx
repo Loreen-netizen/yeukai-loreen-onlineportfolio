@@ -1,10 +1,12 @@
 import React from "react";
 import { Grid, Typography } from "@material-ui/core";
 import { RESUME_DATA } from "../../utils/resumeData";
+import { EDUCATION_MAP } from "../../utils/skillsAndLanguages";
 import  {CustomTimeline, TimeLine} from "../../components/Timeline";
 import WorkOutlineOutlinedIcon from "@material-ui/icons/WorkOutlineOutlined";
 import "./Resume.css"
 import { CustomTimeLineSeperator } from "../../components/Timeline/TimeLine";
+
 
 export const Resume = () => {
   return (

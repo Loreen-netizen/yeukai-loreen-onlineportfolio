@@ -1,4 +1,3 @@
-
 export const LANGUAGES_MAP = [
   { name: "TypeScript", logo_src: `${process.env.PUBLIC_URL}/images/ts.png` },
   { name: "MaterialUI", logo_src: `${process.env.PUBLIC_URL}/images/mui.png` },
@@ -30,7 +29,63 @@ export const LANGUAGES_MAP = [
   { name: "JavaScript", logo_src: `${process.env.PUBLIC_URL}/images/es6.jpeg` },
 ];
 
-export const SKILLS_MAP = [
+export const WORK_EXPERIENCE_MAP = [
+  {
+    title: "React Development Intern",
+    company: "Workplace Incubation, Project Codex, Cape Town",
+    date: "March 2021 to present",
+    description: `Working with a team of 3 other interns on a ReactJS project.
+    Collaborating on a progressive ReactJS web application, starting with competition analysis, 
+    generating personas and user stories, creating click through prototypes on Figma,  
+    version control with GitHub and Git, using GraphCMS as our API which relies on GraphQL as its API query language and runtime.
+     We fetched our API data and stored it locally on Indexed DB and we used Fuana DB as our remote database. 
+     We implemented a service worker and precached assets to allow
+    for user friendly offline user experience.`,
+  },
+  {
+    title: "Agile Web Dev bootcamp mentor",
+    company: "Project Codex, Cape Town",
+    date: "January to February 2021",
+    description: `Mentoring 2021 Online and OnSite bootcamp candidates on Javascript coding challenges.
+       Assisting with daily setup and administrative work. Responding to candidate questions and guiding candidates to
+        find solutions,
+        (explain concepts without providing answers). Promoting an enquiry mindset and identifying candidates that
+        needed extra assistance. Providing feedback on candidates on a weekly basis
+
+
+      `,
+  },
+
+  {
+    title: "Laboratory Technician",
+    company: "Zest Polyurethanes, Cape Town",
+    date: "May to September 2017",
+    description:
+      "Laboratory maintenance, quality control, research and development and paint formulation",
+  },
+
+  {
+    title: "Laboratory Scientist",
+    company: "Fairmind Clinical Laboratories, Bulawayo Zimbabwe",
+    date: "January 2014- December 2014",
+    description: `Receiving and processing of samples prior to laboratory tests, filling requisition forms,
+venepuncture, running laboratory tests in the Serology, Haematology, Microbiology and
+Chemistry departments on various samples such as blood, urine, tissue, synovial fluid,
+sputum, semen, high vaginal swabs and faecal samples.`,
+  },
+
+  {
+    title: "Quality Control Intern",
+    company: " Cold Storage Commission, Bulawayo Zimbabwe",
+    date: "May - December 2013",
+    description: `My responsibilities include quality control and submission of quality control reports. Chemical and
+microbiological assays in the laboratory. New product development. Monitoring factory sanitation
+and proper handling and storage of beef carcasses. Monitoring proper handling and disposal of
+condemned carcasses. Ensuring that all factory procedures were Halaal.`,
+  },
+];
+
+export const EDUCATION_MAP = [
   {
     name: "ReactJS Developer",
     description: "Google Workplace Incubation ",
