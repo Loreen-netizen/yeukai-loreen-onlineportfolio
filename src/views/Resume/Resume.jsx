@@ -9,12 +9,14 @@ export const Resume = () => {
       {/* About Me */}
       <Grid container className="section pb_45">
         <Grid item className="section_title mb_30">
-          <span className= "title_span"></span>
+          <span className="title_span"></span>
           <h6 className="title_text">About Me</h6>
         </Grid>
         <Grid item xs={12}>
           <Typography variant="body2" className="aboutme_text">
-            {RESUME_DATA.AboutMe}
+            {RESUME_DATA.AboutMe1}
+            <br />
+            {RESUME_DATA.AboutMe2}
           </Typography>
         </Grid>
       </Grid>
