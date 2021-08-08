@@ -40,7 +40,7 @@ export const Footer = () => {
       </div>
       <div>
         <StyledDesignTypography>
-          designed and developed by{" "}
+        developed by{" "}
           <StyledLink href="/" target="_blank">
             {RESUME_DATA.name}
           </StyledLink>

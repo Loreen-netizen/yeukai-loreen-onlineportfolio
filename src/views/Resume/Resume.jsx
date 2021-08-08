@@ -35,6 +35,9 @@ const StyledLink = styled.a`
   text-decoration: none;
   color: #fb89bc;
   font-size: 12px;
+  &: hover {
+    color: #f61379;
+  }
 `;
 
 export const Resume = () => {
