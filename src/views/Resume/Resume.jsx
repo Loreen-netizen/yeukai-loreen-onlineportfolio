@@ -182,9 +182,6 @@ export const Resume = () => {
         </Grid>
       </Grid>
 
-      {/* Skills */}
-      <Grid container className="section"></Grid>
-
       {/* Contact */}
       <Grid container className="section"></Grid>
     </>

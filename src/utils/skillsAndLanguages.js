@@ -173,13 +173,13 @@ export const EDUCATION_MAP = [
 export const SERVICES_MAP = [
   {
     title: "Web Development",
-    description: "front and backend web development",
+    description: "Front and backend web development",
     icon: <ComputerOutlinedIcon />,
   },
   {
     title: "Mentoring",
     description:
-      "Online and offsite mentoring of individuals who are new to code, providing guidance and technical support",
+      "Online and onsite code mentoring, guidance and technical support",
     icon: <SupervisedUserCircleOutlinedIcon />,
   },
   {
