@@ -81,8 +81,11 @@ const Figure = styled.figure`
 
     `;
     const StyledLink = styled.a`
-      color: #787878 ;
+      color: #787878;
       text-decoration: none;
+      &: hover {
+        color: #f61379;
+      }
     `;
 
      const StyledSpan = styled.span`
@@ -131,16 +134,20 @@ export const SideBarProfile = () => {
 
       <ProfileInfoDiv>
         <CustomTimeLine icon={<PersonIcon />}>
-          <CustomTimeLineItem title="Name" text={RESUME_DATA.name} />
-          <CustomTimeLineItem title="Title" text={RESUME_DATA.title} />
-          <CustomTimeLineItem title="Email" text={RESUME_DATA.emailAdress} />
+          <CustomTimeLineItem title="Name" text={` ${RESUME_DATA.name}`} />
+          <CustomTimeLineItem title="Title" text={` ${RESUME_DATA.title}`} />
+          <CustomTimeLineItem
+            title="Email"
+            text=" Email Me"
+            link={`mailto:${RESUME_DATA.emailAdress}`}
+          />
 
           {Object.keys(RESUME_DATA.socials).map((key) => {
             return (
               <CustomTimeLineItem
                 key={uuid()}
                 title={key}
-                text={RESUME_DATA.socials[key].text}
+                text={` ${RESUME_DATA.socials[key].text}`}
                 link={RESUME_DATA.socials[key].link}
               ></CustomTimeLineItem>
             );

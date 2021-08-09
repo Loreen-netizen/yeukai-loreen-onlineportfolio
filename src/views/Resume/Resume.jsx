@@ -9,7 +9,6 @@ import { CustomTimeline, TimeLine } from "../../components/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import WorkOutlineOutlinedIcon from "@material-ui/icons/WorkOutlineOutlined";
 import SchoolOutlinedIcon from "@material-ui/icons/SchoolOutlined";
-import "./Resume.css";
 import { CustomTimeLineSeperator } from "../../components/Timeline/TimeLine";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import styled from "styled-components";
@@ -40,6 +39,37 @@ const StyledLink = styled.a`
   }
 `;
 
+const StyledTypographyAboutMe = styled(Typography)`
+  && {
+    color: darkslategray;
+    font-size: 13px;
+    line-height: 32px;
+    white-space: pre-line;
+  }
+`;
+
+const StyledTypographyTitle = styled(Typography)`
+  && {
+    font-size: 15px;
+    font-weight: 500;
+    color: #f83a90;
+  }
+`;
+
+const StyledTypographyDate = styled(Typography)`
+  && {
+    color: darkslategray;
+  }
+`;
+const StyledTypographyDescription = styled(Typography)`
+  && {
+    color: gray;
+    font-size: small;
+    margin-top: 6px;
+  }
+`;
+
+
 export const Resume = () => {
   const [displayText, setDisplayText] = useState("none");
   const [btnText, setBtnText] = useState("Read More...");
@@ -59,11 +89,11 @@ export const Resume = () => {
           <h6 className="title_text">About Me</h6>
         </Grid>
         <Grid item xs={12}>
-          <Typography variant="body2" className="aboutme_text">
+          <StyledTypographyAboutMe variant="body2">
             {RESUME_DATA.AboutMe1}
             <br />
             {RESUME_DATA.AboutMe2}
-          </Typography>
+          </StyledTypographyAboutMe>
         </Grid>
       </Grid>
 
@@ -87,17 +117,19 @@ export const Resume = () => {
                   <TimelineItem>
                     <CustomTimeLineSeperator />
                     <TimelineContent>
-                      <Typography>{workExperience.title}</Typography>
-                      <Typography variant="caption">
+                      <StyledTypographyTitle>
+                        {workExperience.title}
+                      </StyledTypographyTitle>
+                      <StyledTypographyDate variant="caption">
                         {workExperience.date}
-                      </Typography>
-                      <Typography variant="body2">
+                      </StyledTypographyDate>
+                      <StyledTypographyDescription variant="body2">
                         {workExperience.description1}
 
                         <span style={{ display: displayText }}>
                           {workExperience.description2}
                         </span>
-                      </Typography>
+                      </StyledTypographyDescription>
                       <SeeMoreButton
                         onClick={() => {
                           updateDisplayText();
@@ -120,13 +152,15 @@ export const Resume = () => {
                   <TimelineItem>
                     <CustomTimeLineSeperator />
                     <TimelineContent>
-                      <Typography>{education.name}</Typography>
-                      <Typography variant="body2">
+                      <StyledTypographyTitle>
+                        {education.name}
+                      </StyledTypographyTitle>
+                      <StyledTypographyAboutMe variant="body2">
                         {education.location}
-                      </Typography>
-                      <Typography variant="caption">
+                      </StyledTypographyAboutMe>
+                      <StyledTypographyDate variant="caption">
                         {education.year}
-                      </Typography>
+                      </StyledTypographyDate>
                       <Typography variant="body2">
                         <StyledLink
                           href={education.publications}
@@ -135,9 +169,9 @@ export const Resume = () => {
                           {education.publicationsTitle}
                         </StyledLink>
                       </Typography>
-                      <Typography variant="body2">
+                      <StyledTypographyDescription variant="body2">
                         {education.description}
-                      </Typography>
+                      </StyledTypographyDescription>
                     </TimelineContent>
                   </TimelineItem>
                 );

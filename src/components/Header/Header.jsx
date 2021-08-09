@@ -62,7 +62,10 @@ align-items: center;
 const StyledLink = styled.a`
   font-size: 14px;
   margin-right: 12px;
-  color: #1f1f1f;
+  color: #fa75b1;
+  &: hover {
+    color: #ec096f;
+  }
 `;
 const StyledNav = styled(Nav)`
 &&{
