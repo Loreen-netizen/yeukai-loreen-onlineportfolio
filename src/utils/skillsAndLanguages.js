@@ -1,32 +1,88 @@
+import ComputerOutlinedIcon from "@material-ui/icons/ComputerOutlined";
+import SupervisedUserCircleOutlinedIcon from "@material-ui/icons/SupervisedUserCircleOutlined";
+import SchoolOutlinedIcon from "@material-ui/icons/SchoolOutlined";
+
 export const LANGUAGES_MAP = [
-  { name: "TypeScript", logo_src: `${process.env.PUBLIC_URL}/images/ts.png` },
-  { name: "MaterialUI", logo_src: `${process.env.PUBLIC_URL}/images/mui.png` },
-  { name: "ReactJS", logo_src: `${process.env.PUBLIC_URL}/images/reactjs.png` },
-  { name: "NodeJS", logo_src: `${process.env.PUBLIC_URL}/images/nodejs.png` },
   {
-    name: "Database (PostgreSQL)",
-    logo_src: `${process.env.PUBLIC_URL}/images/database.png`,
+    title: "FRONT-END",
+    description: [
+      {
+        name: "ReactJS",
+        logo_src: `${process.env.PUBLIC_URL}/images/reactjs.png`,
+      },
+      {
+        name: "TypeScript",
+        logo_src: `${process.env.PUBLIC_URL}/images/ts.png`,
+      },
+      {
+        name: "Bootstrap CSS",
+        logo_src: `${process.env.PUBLIC_URL}/images/bootstrap.png`,
+      },
+      {
+        name: "MaterialUI",
+        logo_src: `${process.env.PUBLIC_URL}/images/mui.png`,
+      },
+      {
+        name: "ES6",
+        logo_src: `${process.env.PUBLIC_URL}/images/es6.jpeg`,
+      },
+      {
+        name: "IndexedDB",
+        logo_src: `${process.env.PUBLIC_URL}/images/indexeddb.png`,
+      },
+      { name: "Figma", logo_src: `${process.env.PUBLIC_URL}/images/figma.png` },
+      {
+        name: "HTML5",
+        logo_src: `${process.env.PUBLIC_URL}/images/html-5.png`,
+      },
+      { name: "CSS", logo_src: `${process.env.PUBLIC_URL}/images/css.png` },
+    ],
+  },
+  {
+    title: "BACK-END",
+    description: [
+      {
+        name: "Express-NodeJS",
+        logo_src: `${process.env.PUBLIC_URL}/images/nodejs.png`,
+      },
+    ],
+  },
+  {
+    title: "DATABASES",
+    description: [
+      {
+        name: "Database (PostgreSQL)",
+        logo_src: `${process.env.PUBLIC_URL}/images/database.png`,
+      },
+    ],
+  },
+  {
+    title: "SOURCE CONTROL",
+    description: [
+      {
+        name: "Git & GitHub",
+        logo_src: `${process.env.PUBLIC_URL}/images/github.png`,
+      },
+      {
+        name: "Heroku CLI",
+        logo_src: `${process.env.PUBLIC_URL}/images/heroku.png`,
+      },
+      {
+        name: "Netlify",
+        logo_src: `${process.env.PUBLIC_URL}/images/netlify.png`,
+      },
+    ],
   },
 
   {
-    name: "Git & GitHub",
-    logo_src: `${process.env.PUBLIC_URL}/images/github.png`,
+    title: "CONTINOUS INTEGRATION",
+    description: [
+      {
+        name: "Travis CI",
+        logo_src: `${process.env.PUBLIC_URL}/images/travis.png`,
+      },
+    ],
   },
-
-  { name: "Netlify", logo_src: `${process.env.PUBLIC_URL}/images/netlify.png` },
-  {
-    name: "IndexedDB",
-    logo_src: `${process.env.PUBLIC_URL}/images/indexeddb.png`,
-  },
-  { name: "Figma", logo_src: `${process.env.PUBLIC_URL}/images/figma.png` },
-  { name: "FaunaDB", logo_src: `${process.env.PUBLIC_URL}/images/fauna.png` },
-  { name: "HTML5", logo_src: `${process.env.PUBLIC_URL}/images/html-5.png` },
-  { name: "CSS", logo_src: `${process.env.PUBLIC_URL}/images/css.png` },
-  {
-    name: "Bootstrap CSS",
-    logo_src: `${process.env.PUBLIC_URL}/images/bootstrap.png`,
-  },
-  { name: "JavaScript", logo_src: `${process.env.PUBLIC_URL}/images/es6.jpeg` },
 ];
 
 export const WORK_EXPERIENCE_MAP = [
@@ -99,9 +155,10 @@ export const EDUCATION_MAP = [
   },
   {
     name: "Bachelor of Science (Honours) in Applied Biology and Biochemistry.",
-    description:"National University Of Science And Technology",
+    description: "National University Of Science And Technology",
     publications: "http://www.nust.ac.zw/zjst/index.php/volume-12-2017# ",
-    publicationsTitle: "The Effects of Sub Lethal Levels of Lead on Acetylcholinesterase Activity in the Rock Pigeon, (Columba Livia) Y. L. Muusha et al.",
+    publicationsTitle:
+      "The Effects of Sub Lethal Levels of Lead on Acetylcholinesterase Activity in the Rock Pigeon, (Columba Livia) Y. L. Muusha et al.",
     location: "Bulawayo Zimbabwe",
     year: "September 2011 - May 2015",
   },
@@ -110,5 +167,25 @@ export const EDUCATION_MAP = [
     description: "Mtshabezi High School",
     location: "Bulawayo Zimbabwe",
     year: "2010",
+  },
+];
+
+export const SERVICES_MAP = [
+  {
+    title: "Web Development",
+    description: "front and backend web development",
+    icon: <ComputerOutlinedIcon />,
+  },
+  {
+    title: "Mentoring",
+    description:
+      "Online and offsite mentoring of individuals who are new to code, providing guidance and technical support",
+    icon: <SupervisedUserCircleOutlinedIcon />,
+  },
+  {
+    title: "Teaching",
+    description:
+      "Demonstrating coding concepts to individuals who are new to code",
+    icon: <SchoolOutlinedIcon />,
   },
 ];

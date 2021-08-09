@@ -4,6 +4,7 @@ import { RESUME_DATA } from "../../utils/resumeData";
 import {
   EDUCATION_MAP,
   WORK_EXPERIENCE_MAP,
+  SERVICES_MAP,
 } from "../../utils/skillsAndLanguages";
 import { CustomTimeline, TimeLine } from "../../components/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
@@ -65,7 +66,7 @@ const StyledTypographyDescription = styled(Typography)`
   && {
     color: gray;
     font-size: small;
-    margin-top: 6px;
+    margin-top: 10px;
   }
 `;
 
