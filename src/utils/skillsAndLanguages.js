@@ -15,17 +15,18 @@ export const TECH_STACK_MAP = [
         logo_src: `${process.env.PUBLIC_URL}/images/ts.png`,
       },
       {
-        name: "Bootstrap CSS",
-        logo_src: `${process.env.PUBLIC_URL}/images/bootstrap.png`,
+        name: "ES6",
+        logo_src: `${process.env.PUBLIC_URL}/images/es6.jpeg`,
       },
       {
         name: "MaterialUI",
         logo_src: `${process.env.PUBLIC_URL}/images/mui.png`,
       },
       {
-        name: "ES6",
-        logo_src: `${process.env.PUBLIC_URL}/images/es6.jpeg`,
+        name: "Bootstrap CSS",
+        logo_src: `${process.env.PUBLIC_URL}/images/bootstrap.png`,
       },
+
       {
         name: "IndexedDB",
         logo_src: `${process.env.PUBLIC_URL}/images/indexeddb.png`,
@@ -36,19 +37,6 @@ export const TECH_STACK_MAP = [
         logo_src: `${process.env.PUBLIC_URL}/images/html-5.png`,
       },
       { name: "CSS", logo_src: `${process.env.PUBLIC_URL}/images/css.png` },
-    ],
-  },
-  {
-    title: "BACK-END & DATABASES",
-    description: [
-      {
-        name: "Express-NodeJS",
-        logo_src: `${process.env.PUBLIC_URL}/images/nodejs.png`,
-      },
-      {
-        name: "Database (PostgreSQL)",
-        logo_src: `${process.env.PUBLIC_URL}/images/database.png`,
-      },
     ],
   },
 
@@ -70,6 +58,20 @@ export const TECH_STACK_MAP = [
       {
         name: "Travis CI",
         logo_src: `${process.env.PUBLIC_URL}/images/travis.png`,
+      },
+    ],
+  },
+
+  {
+    title: "BACK-END & DATABASES",
+    description: [
+      {
+        name: "Express-NodeJS",
+        logo_src: `${process.env.PUBLIC_URL}/images/nodejs.png`,
+      },
+      {
+        name: "Database (PostgreSQL)",
+        logo_src: `${process.env.PUBLIC_URL}/images/database.png`,
       },
     ],
   },

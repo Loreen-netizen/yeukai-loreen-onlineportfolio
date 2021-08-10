@@ -5,6 +5,7 @@ import { SERVICES_MAP, TECH_STACK_MAP } from "../../utils/skillsAndLanguages";
 import tokens from "../../data/tokens";
 import { Grid, Typography, Icon, Paper } from "@material-ui/core";
 import SchoolOutlinedIcon from "@material-ui/icons/SchoolOutlined";
+import TimelineDot from "@material-ui/lab/TimelineDot";
 
 const StyledServiceIcon = styled(Icon)`
   && {
@@ -12,44 +13,15 @@ const StyledServiceIcon = styled(Icon)`
   }
 `;
 
-const SeeMoreButton = styled.button`
-  background: none;
-  color: #fb89bc;
-  border: none;
-  padding: 0;
-  font-size: 12px;
-`;
-const StyledLink = styled.a`
-  text-decoration: none;
-  color: #fb89bc;
-  font-size: 12px;
-  &: hover {
-    color: #f61379;
-  }
-`;
-
-const StyledTypographyAboutMe = styled(Typography)`
-  && {
-    color: darkslategray;
-    font-size: 13px;
-    line-height: 32px;
-    white-space: pre-line;
-  }
-`;
-
 const StyledTypographyTitle = styled(Typography)`
   && {
+    margin-bottom: 2rem;
     font-size: 15px;
     font-weight: 500;
     color: #f83a90;
   }
 `;
 
-const StyledTypographyDate = styled(Typography)`
-  && {
-    color: darkslategray;
-  }
-`;
 const StyledTypographyDescription = styled(Typography)`
   && {
     color: gray;
@@ -58,21 +30,31 @@ const StyledTypographyDescription = styled(Typography)`
   }
 `;
 
-const StyledLogo = styled.img`
-  height: ${tokens.images.xxs};
-  width: auto;
-  border-radius: ${tokens.radius.circle};
+const StyledTimelineDot = styled(TimelineDot)`
+  && {
+    border-color: pink;
+    padding: 2px;
+    margin-right: 5px;
+  }
 `;
 
-const StyledUl = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-`;
-const StyledLi = styled.li`
-  flex-basis: 33%;
-  padding-top: ${tokens.spacing.xl};
-  padding bottom:  ${tokens.spacing.m};
+const StyledPaper = styled(Paper)`
+&&{
+
+  border-radius: 8px;
+padding: 20px;
+box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08)
+min-height: 186px;
+height: 100%
+}`;
+const StyledSkillTypography = styled(Typography)`
+  && {
+    display: flex;
+    align-items: center;
+    color: #989898;
+    font-weight: 400;
+    line-height: 18px;
+  }
 `;
 
 const StyledContainer = styled(Grid)`
@@ -80,84 +62,78 @@ const StyledContainer = styled(Grid)`
     flex-direction: column;
   }
 `;
+const StyledLogo = styled.img`
+  height: 60px;
+  width: auto;
+  border-radius: 50%;
+`;
+
+const StyledUl = styled.ul`
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-bottom: 2rem;
+`;
+const StyledLi = styled.li`
+  //  flex: 0 1 calc(20% - 8px);
+  padding-top: 2rem;
+  padding bottom: 1rem;
+  margin: 1rem;
+ 
+`;
 
 export const SkillsAndLanguages = () => {
   return (
     <StyledContainer>
       {/* Skills */}
- <Grid container>
-        <Grid item className="section_title mb_30">
-          <span className="title_span"></span>
-          <h6 className="title_text">Skills And Languages</h6>
-        </Grid>
-        <Grid
-          container
-          spacing={3}
-          justifyContent="space-between"
-          className="pb_45"
-        >
+      <Grid item className="section_title mb_30">
+        <span className="title_span"></span>
+        <h6 className="title_text">Skills And Languages</h6>
+      </Grid>
+
+      <Grid item xs={12}>
+        <StyledUl>
           {TECH_STACK_MAP.map((skill) => {
-            return (
-              <Grid item xs={12} s={6} md={3}>
-                <Paper elevation={0}>
-                  <StyledTypographyTitle variant="h6">
-                    {skill.title}
-                  </StyledTypographyTitle>
-                   <div>
-                     {skill.description.map((language) => {
-                      return(
-                        <Grid
-                          item
-                          className="mb_60"
-                          justifyContent="space-between"
-                        >
-                          <ul>
-                            <li>
-                      
-                              {language.name}
-                              <img
-                                src={language.logo_src}
-                                alt="language logo"
-                                height="50px"
-                                width="auto"
-                              />
-                            </li>
-                          </ul>
-                          </Grid>
-                      )
-                         })}
-                   </div>
-                </Paper>
-        </Grid>)})}
-        </Grid>
-      
+            return skill.description.map((language) => {
+              return (
+                <StyledLi>
+                  <StyledLogo src={language.logo_src} alt="language logo" />
+                </StyledLi>
+              );
+            });
+          })}
+        </StyledUl>
+      </Grid>
 
-      {/* <Grid container xs={12}>
-        <Grid item className="section_title mb_60 top_60">
-          <span className="title_span"></span>
-          <h6 className="title_text">Tech Stack</h6>
-        </Grid>
-        {TECH_STACK_MAP.map((object) => {
-         return Object.values(object.description).map((language) => {
-           {console.log(language)}
-           return (
-             <Grid item className="mb_60" justifyContent="space-between">
-               <img
-                 src={language.logo_src}
-                 alt="language logo"
-                 height="50px"
-                 width="auto"
-               />
-               <ul>
-                 <li> {language.name}</li>
-               </ul>
-             </Grid>
-           );
-         });
+      <Grid
+        container
+        spacing={3}
+        justifyContent="space-around"
+        className="section pb_45"
+      >
+        {TECH_STACK_MAP.map((skill) => {
+          return (
+            <Grid item xs={12} sm={6} md={3}>
+              <StyledPaper elevation={5}>
+                <StyledTypographyTitle variant="h6">
+                  {skill.title}
+                </StyledTypographyTitle>
+
+                {skill.description.map((language) => {
+                  return (
+                    <StyledSkillTypography variant="body2">
+                      <StyledTimelineDot variant="outlined" />
+                      {language.name}
+                   
+                    </StyledSkillTypography>
+                  );
+                })}
+              </StyledPaper>
+            </Grid>
+          );
         })}
-      </Grid> */}
-
-      {/* {TECH_STACK_MAP.map((object)=>{(object.description).map((skill)=>{ */}
+      </Grid>
 
       <Grid container>
         <Grid item className="section_title mb_60 top_60">
@@ -182,8 +158,8 @@ export const SkillsAndLanguages = () => {
             })}
           </Grid>
         </Grid>
-        </Grid>
-     </Grid>
+      </Grid>
+      {/* </Grid> */}
     </StyledContainer>
   );
 };
