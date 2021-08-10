@@ -2,7 +2,7 @@ import ComputerOutlinedIcon from "@material-ui/icons/ComputerOutlined";
 import SupervisedUserCircleOutlinedIcon from "@material-ui/icons/SupervisedUserCircleOutlined";
 import SchoolOutlinedIcon from "@material-ui/icons/SchoolOutlined";
 
-export const LANGUAGES_MAP = [
+export const TECH_STACK_MAP = [
   {
     title: "FRONT-END",
     description: [
@@ -39,25 +39,21 @@ export const LANGUAGES_MAP = [
     ],
   },
   {
-    title: "BACK-END",
+    title: "BACK-END & DATABASES",
     description: [
       {
         name: "Express-NodeJS",
         logo_src: `${process.env.PUBLIC_URL}/images/nodejs.png`,
       },
-    ],
-  },
-  {
-    title: "DATABASES",
-    description: [
       {
         name: "Database (PostgreSQL)",
         logo_src: `${process.env.PUBLIC_URL}/images/database.png`,
       },
     ],
   },
+
   {
-    title: "SOURCE CONTROL",
+    title: "SOURCE CONTROL & CI",
     description: [
       {
         name: "Git & GitHub",
@@ -71,12 +67,6 @@ export const LANGUAGES_MAP = [
         name: "Netlify",
         logo_src: `${process.env.PUBLIC_URL}/images/netlify.png`,
       },
-    ],
-  },
-
-  {
-    title: "CONTINOUS INTEGRATION",
-    description: [
       {
         name: "Travis CI",
         logo_src: `${process.env.PUBLIC_URL}/images/travis.png`,
