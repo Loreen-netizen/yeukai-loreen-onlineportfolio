@@ -25,6 +25,7 @@ export const Portfolio = () => {
 
 const StyledLink = styled.a`
   color: pink;
+  cursor:pointer;
   &: hover {
     color: #F962A6;
   }
@@ -41,6 +42,11 @@ const StyledDialogTitle = styled(DialogTitle)`
     font-weight: 500;
     color: #f83a90;
   }
+`;
+const StyledDialogImage = styled.img`
+  height: 60px;
+  width: 60px;
+  margin-left:40%;
 `;
 
  
@@ -102,12 +108,15 @@ const StyledDialogTitle = styled(DialogTitle)`
                           title={project.title}
                         />
                         <CardContent>
-                          <Typography className="custorm_card_title">
+                          <Typography
+                            variant="body2"
+                            className="custom_card_title"
+                          >
                             {project.title}
                           </Typography>
                           <Typography
                             variant="caption"
-                            className="custorm_card_caption"
+                            className="custom_card_caption"
                           >
                             {project.caption}
                           </Typography>
@@ -126,7 +135,11 @@ const StyledDialogTitle = styled(DialogTitle)`
         <StyledDialogTitle onClose={() => setprojectDialog(false)}>
           {projectDialog.title}
         </StyledDialogTitle>
-        <img src="" alt="" className="projectDialog_image"></img>
+        <StyledDialogImage
+          src={projectDialog.logo_src}
+          alt="project icon"
+          className="projectDialog_image"
+        ></StyledDialogImage>
         <DialogContent>
           <StyledTypographyDescription className="projectDialog_description">
             {projectDialog.description}
