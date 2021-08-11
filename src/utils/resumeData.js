@@ -35,6 +35,7 @@ export const Projects = [
     tag: "React",
     logo_src: `${process.env.PUBLIC_URL}/images/react-logo.png`,
     title: "Eazy-meals PWA",
+    caption: `Get meal ideas for any day or occasion`,
     description: `I collaborated with a team of 3 other interns on this ReactJS project. We did competition analysis, 
     generating personas and user stories, creating click 
      through prototypes on Figma, version control with GitHub and Git, using GraphCMS as our API which relies on GraphQL 
@@ -53,6 +54,7 @@ export const Projects = [
     tag: "React",
     logo_src: `${process.env.PUBLIC_URL}/images/react-logo.png`,
     title: "To Do List PWA",
+    caption: `Plan your daily tasks`,
     description: `The goal of this app was to learn how create a react project and deploy it to netlify.
     I learnt how to set up a react project, used material UI for my CSS and storybook for for building UI components 
     and pages in isolation. `,
@@ -69,6 +71,7 @@ export const Projects = [
     tag: "Express-NodeJS",
     logo_src: `${process.env.PUBLIC_URL}/images/node-big.jpg`,
     title: "Greetings Web App",
+    caption: `Greets you in 3 different languages`,
     description: `For the greetings web application, I used express js and express session to make my web-app functional.
      I learnt about Structured Query Language (SQL) and that we use it to query relational databases.
       I learnt how to set up and install PostgreSQL and how to test my factory function queries. I learnt that when 
@@ -87,6 +90,7 @@ export const Projects = [
     tag: "Express-NodeJS",
     logo_src: `${process.env.PUBLIC_URL}/images/node-big.jpg`,
     title: "Registration Numbers Web App",
+    caption: `Keep track of registration numbers`,
     description: `For the registration numbers web application, skills I  used included creating a web page using CSS, 
 HTML and JavaScript. Using PostgreSQL to create a database. Querying my database using Structured
  Query Language and deploying my web application to Heroku and using Travis CI for continuous integration.
@@ -104,6 +108,7 @@ I learnt how to use the Bootstrap 4 Content Delivery Network for my CSS.`,
     tag: "Express-NodeJS",
     logo_src: `${process.env.PUBLIC_URL}/images/node-big.jpg`,
     title: "Waiter Time Table Web App",
+    caption: `Allows waiters to select work shifts in advance`,
     description: `The objective of the application was to create a web application that allows a coffee shop owner
      to view shifts 
 scheduled by waiters for the week. The web application allows the shop owner to see the number of waiters 

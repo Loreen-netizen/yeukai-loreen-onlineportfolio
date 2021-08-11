@@ -9,15 +9,21 @@ import {
   CardMedia,
   CardContent,
   Grow,
+  DialogTitle,
+  DialogContent,
+  Dialog,
+  DialogActions
 } from "@material-ui/core";
 import { Projects } from "../../utils/resumeData";
 import "./Portfolio.css";
+
+
 export const Portfolio = () => {
   const [tabValue, setTabValue] = useState("All");
+ const [projectDialog, setprojectDialog] = useState(false);
 
-  const tabChange = (event, newValue) => {
-    setTabValue(newValue);
-  };
+
+ 
   return (
     <Grid className="section pb_45 pt_45">
       {/* title */}
@@ -29,28 +35,29 @@ export const Portfolio = () => {
       <Grid item xs={12}>
         <Tabs
           value={tabValue}
-          indicatorColor="pink"
+          indicatorColor="white"
           className="custom_tabs"
-          onChange={() => tabChange()}
+          onChange={(event, newValue) => setTabValue(newValue)}
         >
           <Tab
             label="All"
             value="All"
             className={
-              tabValue === "All" ? "customTabs_item active" : "customTabs_item"
+              tabValue === "All" ? "customtabs_item active" : "customtabs_item"
             }
-          ></Tab>
+          />
 
           {[...new Set(Projects.map((item) => item.tag))].map((tag) => {
             return (
               <Tab
                 label={tag}
                 value={tag}
-                  className={
-              tabValue === "All" ? "customTabs_item active" : "customTabs_item"
-            
+                className={
+                  tabValue === "All"
+                    ? "customTabs_item active"
+                    : "customTabs_item"
                 }
-              ></Tab>
+              />
             );
           })}
         </Tabs>
@@ -61,24 +68,62 @@ export const Portfolio = () => {
         <Grid container spacing={2}>
           {Projects.map((project) => (
             <>
-              {tabValue === project.tag || tabValue === "All" ? (  <Grid item>
+              {tabValue === project.tag || tabValue === "All" ? (
+                <Grid item>
                   <Grow in timeout={1000}>
-                    <Card>
+                    <Card
+                      className="custom_card"
+                      onClick={() => setprojectDialog(project)}
+                    >
                       <CardActionArea>
-                        <CardMedia />
+                        <CardMedia
+                          className="custom_card_image"
+                          image={project.logo_src}
+                          title={project.title}
+                        />
                         <CardContent>
-                          <Typography>{project.title}</Typography>
-                          <Typography>{project.description}</Typography>
+                          <Typography className="custorm_card_title">
+                            {project.title}
+                          </Typography>
+                          <Typography
+                            variant="caption"
+                            className="custorm_card_caption"
+                          >
+                            {project.caption}
+                          </Typography>
                         </CardContent>
                       </CardActionArea>
                     </Card>
                   </Grow>
-                </Grid>) : null}
-              
+                </Grid>
+              ) : null}
             </>
           ))}
         </Grid>
       </Grid>
+
+      <Dialog open={projectDialog} onClose={() => setprojectDialog(false)}>
+        <DialogTitle onClose={() => setprojectDialog(false)}>
+          {projectDialog.title}
+        </DialogTitle>
+        <img src="" alt="" className="projectDialog_image"></img>
+        <DialogContent>
+          <Typography className="projectDialog_description">
+            {projectDialog.description}
+          </Typography>
+        </DialogContent>
+        <DialogActions className="projectDialog_actions">
+          {projectDialog?.links?.map((link) => (
+            <a
+              href={link.link}
+              target="_blank"
+              className="projectDialog_icon"
+            >
+              {link.icon}
+            </a>
+          ))}
+        </DialogActions>
+      </Dialog>
     </Grid>
   );
 };
