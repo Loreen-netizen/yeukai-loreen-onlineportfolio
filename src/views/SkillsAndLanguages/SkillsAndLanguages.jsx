@@ -63,7 +63,7 @@ const StyledContainer = styled(Grid)`
   }
 `;
 const StyledLogo = styled.img`
-  height: 60px;
+  height: 62px;
   width: auto;
   border-radius: 50%;
 `;
@@ -83,6 +83,14 @@ const StyledLi = styled.li`
  
 `;
 
+const StyledIconsGrid = styled(Grid)`
+  && {
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+`;
+
 export const SkillsAndLanguages = () => {
   return (
     <StyledContainer>
@@ -92,7 +100,7 @@ export const SkillsAndLanguages = () => {
         <h6 className="title_text">Skills And Languages</h6>
       </Grid>
 
-      <Grid item xs={12}>
+      <StyledIconsGrid item xs={12}>
         <StyledUl>
           {TECH_STACK_MAP.map((skill) => {
             return skill.description.map((language) => {
@@ -104,7 +112,7 @@ export const SkillsAndLanguages = () => {
             });
           })}
         </StyledUl>
-      </Grid>
+      </StyledIconsGrid>
 
       <Grid
         container
@@ -114,7 +122,7 @@ export const SkillsAndLanguages = () => {
       >
         {TECH_STACK_MAP.map((skill) => {
           return (
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid item xs={12} sm={6} md={3} >
               <StyledPaper elevation={5}>
                 <StyledTypographyTitle variant="h6">
                   {skill.title}
@@ -125,7 +133,6 @@ export const SkillsAndLanguages = () => {
                     <StyledSkillTypography variant="body2">
                       <StyledTimelineDot variant="outlined" />
                       {language.name}
-                   
                     </StyledSkillTypography>
                   );
                 })}
