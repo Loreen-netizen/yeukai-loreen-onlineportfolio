@@ -4,9 +4,9 @@ import { RESUME_DATA } from "../../utils/resumeData";
 import {
   EDUCATION_MAP,
   WORK_EXPERIENCE_MAP,
-  SERVICES_MAP,
+ 
 } from "../../utils/skillsAndLanguages";
-import { CustomTimeline, TimeLine } from "../../components/Timeline";
+import { TimeLine } from "../../components/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import WorkOutlineOutlinedIcon from "@material-ui/icons/WorkOutlineOutlined";
 import SchoolOutlinedIcon from "@material-ui/icons/SchoolOutlined";
@@ -99,7 +99,7 @@ export const Resume = () => {
       </Grid>
 
       {/* Education And Experience */}
-      <Grid container className="section"></Grid>
+  
       <Grid item className="section_title mb_30">
         <span className="title_span"></span>
         <h6 className="title_text">Resume</h6>

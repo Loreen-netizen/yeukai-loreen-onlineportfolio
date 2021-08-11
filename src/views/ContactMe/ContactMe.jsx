@@ -1,100 +1,54 @@
 import React from "react";
 import styled from "styled-components";
 import { RESUME_DATA } from "../../utils/resumeData";
-import { Grid, Typography, Icon, Paper, TextField } from "@material-ui/core";
-import TimelineDot from "@material-ui/lab/TimelineDot";
+import { Grid, Typography, TextField } from "@material-ui/core";
 import CustomButton from "../../components/CustomButton";
 
-const StyledServiceIcon = styled(Icon)`
+
+
+const StyledTypographyContact = styled(Typography)`
   && {
-    color: darkslategray;
+    color: #787878;
+    font-size: 14px;
   }
 `;
 
-const StyledTypographyTitle = styled(Typography)`
+const StyledSocialsGrid = styled(Grid)`
   && {
-    margin-bottom: 2rem;
-    font-size: 15px;
-    font-weight: 500;
-    color: #f83a90;
-  }
-`;
 
-const StyledTypographyDescription = styled(Typography)`
-  && {
-    color: gray;
-    font-size: small;
-    margin-top: 10px;
-  }
-`;
-
-const StyledTimelineDot = styled(TimelineDot)`
-  && {
-    border-color: pink;
-    padding: 2px;
-    margin-right: 5px;
-  }
-`;
-
-const StyledPaper = styled(Paper)`
-&&{
-
-  border-radius: 8px;
-padding: 20px;
-box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08)
-min-height: 186px;
-height: 100%
-}`;
-const StyledSkillTypography = styled(Typography)`
-  && {
-    display: flex;
-    align-items: center;
-    color: #989898;
-    font-weight: 400;
-    line-height: 18px;
+    margin-top: 25px;
   }
 `;
 
 const StyledContainer = styled(Grid)`
   && {
-    flex-direction: row;
-    padding: 50px;
+    padding-top: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 `;
-const StyledLogo = styled.img`
-  height: 62px;
-  width: auto;
-  border-radius: 50%;
-`;
 
-const StyledUl = styled.ul`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  list-style: none;
-  margin-bottom: 2rem;
-`;
-const StyledLi = styled.li`
-  //  flex: 0 1 calc(20% - 8px);
-  padding-top: 2rem;
-  padding bottom: 1rem;
-  margin: 1rem;
- 
-`;
 
-const StyledIconsGrid = styled(Grid)`
-  && {
-    @media (max-width: 991px) {
-      display: none;
-    }
+const StyledSpan = styled.span`
+ color:black;
+ font-weight: 500;
+`;
+const StyledLink = styled.a`
+  font-size: 10px;
+  margin-right: 10px;
+  color: #fa75b1;
+  &: hover {
+    color: #ec096f;
   }
 `;
+
+
 
 export const ContactMe = () => {
   return (
-    <StyledContainer>
+    <StyledContainer container>
       {/* Contact Form */}
-      <Grid container>
+      <Grid container xs={12} lg={8}>
         <Grid item xs={12} lg={7} className="pb_45">
           <Grid container>
             <Grid item className="section_title mb_30">
@@ -129,45 +83,54 @@ export const ContactMe = () => {
       </Grid>
 
       {/* Contact information */}
-      <Grid container>
-        <Grid item xs={12} lg={5}>
+      <Grid container xs={12} lg={4}>
+        <Grid item>
           <Grid container>
             <Grid item className="section_title mb_30">
               <span className="title_span"></span>
               <h6 className="title_text">Contact Information</h6>
             </Grid>
 
-            {/* contact details */}
+       {/* contact details */}
             <Grid item xs={12}>
-              <Grid container spacing={2}>
+              <Grid container spacing={1}>
                 <Grid item xs={12}>
-                  <Typography>
-                    <span>Address:</span>
+                  <StyledTypographyContact>
+                    <StyledSpan>Address:</StyledSpan>
                     {` ${RESUME_DATA.Address}`}
-                  </Typography>
+                  </StyledTypographyContact>
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography>
-                    <span>Phone:</span>
+                  <StyledTypographyContact>
+                    <StyledSpan>Phone:</StyledSpan>
                     {` ${RESUME_DATA.cellphoneNumber}`}
-                  </Typography>
+                  </StyledTypographyContact>
                 </Grid>
                 <Grid item xs={12}>
-                  <Typography>
-                    <span>Email:</span>
+                  <StyledTypographyContact>
+                    <StyledSpan>Email:</StyledSpan>
                     {` ${RESUME_DATA.emailAdress}`}
-                  </Typography>
+                  </StyledTypographyContact>
                 </Grid>
               </Grid>
 
               {/* socials */}
-              <Grid item xs={12}>
-<Grid container>
-{RESUME_DATA.socials.map((social)=>{
-    return <Grid item></Grid>;
-})}
-</Grid>
-              </Grid>
+              <StyledSocialsGrid item xs={12}>
+                <Grid container>
+                  {Object.keys(RESUME_DATA.socials).map((social) => {
+                    return (
+                      <Grid item>
+                        <StyledLink
+                          href={RESUME_DATA.socials[social].link}
+                          target="_blank"
+                        >
+                          {RESUME_DATA.socials[social].icon}
+                        </StyledLink>
+                      </Grid>
+                    );
+                  })}
+                </Grid>
+              </StyledSocialsGrid>
             </Grid>
           </Grid>
         </Grid>
