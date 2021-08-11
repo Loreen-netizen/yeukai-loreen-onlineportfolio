@@ -1,6 +1,4 @@
-.custom_tabs{
-
-}
+/* tabs */
 
 .customtabs_item{
     padding: 0px !important;
@@ -17,3 +15,27 @@
 color: #f72585 !important;
   text-transform: inherit !important;
 }
+
+/* end of tabs */
+
+/* cards */
+.custom_card{
+    height: 100%;
+    max-width: 350px;
+    border-radius: 5px;
+    overflow: hidden;
+    outline-width: 0px !important;
+
+}
+.custom_card_image{
+    height: 300px;
+    width: auto;
+}
+.custom_card_title{
+    font-weight: 500;
+}
+/* end of cards */
+
+/* dialog */
+
+/* end of dialog */

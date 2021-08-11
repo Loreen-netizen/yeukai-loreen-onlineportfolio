@@ -14,6 +14,7 @@ import {
   Dialog,
   DialogActions
 } from "@material-ui/core";
+import CodeIcon from "@material-ui/icons/Code";
 import { Projects } from "../../utils/resumeData";
 import "./Portfolio.css";
 
@@ -76,11 +77,11 @@ export const Portfolio = () => {
                       onClick={() => setprojectDialog(project)}
                     >
                       <CardActionArea>
-                        <CardMedia
+                        {/* <CardMedia
                           className="custom_card_image"
                           image={project.logo_src}
                           title={project.title}
-                        />
+                        /> */}
                         <CardContent>
                           <Typography className="custorm_card_title">
                             {project.title}
