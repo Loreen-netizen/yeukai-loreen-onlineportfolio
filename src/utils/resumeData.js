@@ -33,7 +33,7 @@ export const RESUME_DATA = {
 export const Projects = [
   {
     tag: "React",
-    logo_src: `${process.env.PUBLIC_URL}/images/project-management.png`,
+    logo_src: `${process.env.PUBLIC_URL}/images/dinner.png`,
     title: "Eazy-meals PWA",
     caption: `Get meal ideas for any day or occasion`,
     description: `I collaborated with a team of 3 other interns on this ReactJS project. We did competition analysis, 
@@ -52,7 +52,7 @@ export const Projects = [
   },
   {
     tag: "React",
-    logo_src: `${process.env.PUBLIC_URL}/images/project-management.png`,
+    logo_src: `${process.env.PUBLIC_URL}/images/to-do-list.png`,
     title: "To Do List PWA",
     caption: `Plan your daily tasks`,
     description: `The goal of this app was to learn how create a react project and deploy it to netlify.
@@ -69,7 +69,7 @@ export const Projects = [
 
   {
     tag: "Express-NodeJS",
-    logo_src: `${process.env.PUBLIC_URL}/images/project-management.png`,
+    logo_src: `${process.env.PUBLIC_URL}/images/hello.png`,
     title: "Greetings Web App",
     caption: `Greets you in 3 different languages`,
     description: `For the greetings web application, I used express js and express session to make my web-app functional.
@@ -88,7 +88,7 @@ export const Projects = [
 
   {
     tag: "Express-NodeJS",
-    logo_src: `${process.env.PUBLIC_URL}/images/project-management.png`,
+    logo_src: `${process.env.PUBLIC_URL}/images/car (1).png`,
     title: "Registration Numbers Web App",
     caption: `Keep track of registration numbers`,
     description: `For the registration numbers web application, skills I  used included creating a web page using CSS, 
@@ -106,7 +106,7 @@ I learnt how to use the Bootstrap 4 Content Delivery Network for my CSS.`,
 
   {
     tag: "Express-NodeJS",
-    logo_src: `${process.env.PUBLIC_URL}/images/project-management.png`,
+    logo_src: `${process.env.PUBLIC_URL}/images/serving.png`,
     title: "Waiter Time Table Web App",
     caption: `Allows waiters to select work shifts in advance`,
     description: `The objective of the application was to create a web application that allows a coffee shop owner

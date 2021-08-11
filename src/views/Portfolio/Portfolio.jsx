@@ -77,11 +77,11 @@ export const Portfolio = () => {
                       onClick={() => setprojectDialog(project)}
                     >
                       <CardActionArea>
-                        {/* <CardMedia
+                        <CardMedia
                           className="custom_card_image"
                           image={project.logo_src}
                           title={project.title}
-                        /> */}
+                        />
                         <CardContent>
                           <Typography className="custorm_card_title">
                             {project.title}
