@@ -17,18 +17,37 @@ import {
 import CodeIcon from "@material-ui/icons/Code";
 import { Projects } from "../../utils/resumeData";
 import "./Portfolio.css";
-
+import styled from "styled-components"
 
 export const Portfolio = () => {
   const [tabValue, setTabValue] = useState("All");
  const [projectDialog, setprojectDialog] = useState(false);
 
+const StyledLink = styled.a`
+  color: pink;
+  &: hover {
+    color: #F962A6;
+  }
+`;
+const StyledTypographyDescription = styled(Typography)`
+  && {
+    color: gray;
+    font-size: small;
+  }
+`;
+const StyledDialogTitle = styled(DialogTitle)`
+  && {
+    font-size: 12px;
+    font-weight: 500;
+    color: #f83a90;
+  }
+`;
 
  
   return (
-    <Grid className="section pb_45 pt_45">
+    <Grid className="section pb_45 pt_45" spacing={1}>
       {/* title */}
-      <Grid item className="section_title mb_30">
+      <Grid item className="section_title mb_20">
         <span className="title_span"></span>
         <h6 className="title_text">Portfolio</h6>
       </Grid>
@@ -66,7 +85,7 @@ export const Portfolio = () => {
 
       {/* Projects */}
       <Grid item xs={12}>
-        <Grid container spacing={2}>
+        <Grid container spacing={3} className="top_30">
           {Projects.map((project) => (
             <>
               {tabValue === project.tag || tabValue === "All" ? (
@@ -104,24 +123,24 @@ export const Portfolio = () => {
       </Grid>
 
       <Dialog open={projectDialog} onClose={() => setprojectDialog(false)}>
-        <DialogTitle onClose={() => setprojectDialog(false)}>
+        <StyledDialogTitle onClose={() => setprojectDialog(false)}>
           {projectDialog.title}
-        </DialogTitle>
+        </StyledDialogTitle>
         <img src="" alt="" className="projectDialog_image"></img>
         <DialogContent>
-          <Typography className="projectDialog_description">
+          <StyledTypographyDescription className="projectDialog_description">
             {projectDialog.description}
-          </Typography>
+          </StyledTypographyDescription>
         </DialogContent>
         <DialogActions className="projectDialog_actions">
           {projectDialog?.links?.map((link) => (
-            <a
+            <StyledLink
               href={link.link}
               target="_blank"
               className="projectDialog_icon"
             >
               {link.icon}
-            </a>
+            </StyledLink>
           ))}
         </DialogActions>
       </Dialog>

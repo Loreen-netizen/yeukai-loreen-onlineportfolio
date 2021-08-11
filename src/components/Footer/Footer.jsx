@@ -4,7 +4,7 @@ import {RESUME_DATA} from "../../utils/resumeData";
 import styled from "styled-components";
 
 const MainDiv = styled.div`
-  background-color: #f72585;
+  background-color: #F962A6;
   color: white;
   display: flex;
   flex-wrap: wrap;
