@@ -7,6 +7,7 @@ import Portfolio from "../../views/Portfolio";
 import Resume from "../../views/Resume";
 import SkillsAndLanguages from "../../views/SkillsAndLanguages";
 import Footer from "../Footer";
+import ContactMe from "../../views/ContactMe";
 import "./App.css"
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -29,6 +30,9 @@ export const App = () => {
                   </Route>
                   <Route path="/skills">
                     <SkillsAndLanguages />
+                  </Route>
+                  <Route path="/contactme">
+                    <ContactMe />
                   </Route>
                   <Route path="/">
                     <Resume />

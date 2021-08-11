@@ -1,10 +1,7 @@
 import React from "react";
-import { v4 as createID } from "uuid";
 import styled from "styled-components";
 import { SERVICES_MAP, TECH_STACK_MAP } from "../../utils/skillsAndLanguages";
-import tokens from "../../data/tokens";
 import { Grid, Typography, Icon, Paper } from "@material-ui/core";
-import SchoolOutlinedIcon from "@material-ui/icons/SchoolOutlined";
 import TimelineDot from "@material-ui/lab/TimelineDot";
 
 const StyledServiceIcon = styled(Icon)`
