@@ -1,6 +1,6 @@
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkIcon from "@material-ui/icons/Link";
+
 
 export const RESUME_DATA = {
   name: "Yeukai Loreen Muusha",

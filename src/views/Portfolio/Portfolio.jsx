@@ -14,7 +14,6 @@ import {
   Dialog,
   DialogActions
 } from "@material-ui/core";
-import CodeIcon from "@material-ui/icons/Code";
 import { Projects } from "../../utils/resumeData";
 import "./Portfolio.css";
 import styled from "styled-components"
