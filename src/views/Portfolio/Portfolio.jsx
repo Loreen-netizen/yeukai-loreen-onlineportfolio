@@ -1,5 +1,15 @@
 import React, { useState } from "react";
-import { Grid, Typography, Tabs, Tab } from "@material-ui/core";
+import {
+  Grid,
+  Typography,
+  Tabs,
+  Tab,
+  Card,
+  CardActionArea,
+  CardMedia,
+  CardContent,
+  Grow,
+} from "@material-ui/core";
 import { Projects } from "../../utils/resumeData";
 import "./Portfolio.css";
 export const Portfolio = () => {
@@ -36,18 +46,39 @@ export const Portfolio = () => {
               <Tab
                 label={tag}
                 value={tag}
-                className={
-                  tabValue === { tag }
-                    ? "customTabs_item active"
-                    : "customTabs_item"
+                  className={
+              tabValue === "All" ? "customTabs_item active" : "customTabs_item"
+            
                 }
               ></Tab>
             );
           })}
         </Tabs>
       </Grid>
-   
-   Projects
+
+      {/* Projects */}
+      <Grid item xs={12}>
+        <Grid container spacing={2}>
+          {Projects.map((project) => (
+            <>
+              {tabValue === project.tag || tabValue === "All" ? (  <Grid item>
+                  <Grow in timeout={1000}>
+                    <Card>
+                      <CardActionArea>
+                        <CardMedia />
+                        <CardContent>
+                          <Typography>{project.title}</Typography>
+                          <Typography>{project.description}</Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Grow>
+                </Grid>) : null}
+              
+            </>
+          ))}
+        </Grid>
+      </Grid>
     </Grid>
   );
 };
