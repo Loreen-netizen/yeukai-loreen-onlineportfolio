@@ -3,9 +3,17 @@
 }
 
 .customtabs_item{
+    padding: 0px !important;
+    min-width: 0px !important;
+    margin-right: 20px !important;
+    text-transform: inherit !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    outline-width: 0px !important;
 
 }
 
-.customtabs_item .active{
-    
+.customtabs_item_active{
+color: #f72585 !important;
+  text-transform: inherit !important;
 }

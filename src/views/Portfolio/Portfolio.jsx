@@ -43,7 +43,7 @@ export const Portfolio = () => {
             label="All"
             value="All"
             className={
-              tabValue === "All" ? "customtabs_item active" : "customtabs_item"
+              tabValue === "All" ? "customtabs_item_active" : "customtabs_item"
             }
           />
 
@@ -53,9 +53,9 @@ export const Portfolio = () => {
                 label={tag}
                 value={tag}
                 className={
-                  tabValue === "All"
-                    ? "customTabs_item active"
-                    : "customTabs_item"
+                  tabValue === tag
+                    ? "customtabs_item_active"
+                    : "customtabs_item"
                 }
               />
             );
