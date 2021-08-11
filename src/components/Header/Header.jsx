@@ -67,6 +67,12 @@ const StyledLink = styled.a`
     color: #ec096f;
   }
 `;
+
+const StyledHireMeLink = styled.a`
+  text-decoration: none;
+  color: #fa75b1;
+`;
+
 const StyledNav = styled(Nav)`
 &&{
   margin-right: auto;
@@ -130,7 +136,9 @@ export const Header = (props) => {
               </StyledLink>
             );
           })}
-          <CustomButton text="Hire Me" icon={<Telegram />} />
+          <StyledHireMeLink href={`mailto:${RESUME_DATA.emailAdress}`}>
+            <CustomButton text="Hire Me" icon={<Telegram />} />
+          </StyledHireMeLink>
         </StyledSocialsDiv>
       </Navbar.Collapse>
       {/* </Navbar.Toggle> */}

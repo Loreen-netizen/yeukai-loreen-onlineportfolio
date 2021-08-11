@@ -154,7 +154,13 @@ export const SideBarProfile = () => {
           })}
         </CustomTimeLine>
         <ButtonDiv>
-          <CustomButton text={"Download Cv"} icon={<StyledIcon />} />
+          <StyledLink
+            href={`${process.env.PUBLIC_URL}/images/Yeukai Loreen Muusha CV.pdf`}
+            download
+            target="_blank"
+          >
+            <CustomButton text={"Download Cv"} icon={<StyledIcon />} />
+          </StyledLink>
         </ButtonDiv>
       </ProfileInfoDiv>
     </ProfileDiv>
