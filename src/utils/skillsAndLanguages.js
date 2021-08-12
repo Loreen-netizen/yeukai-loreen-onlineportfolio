@@ -11,6 +11,14 @@ export const TECH_STACK_MAP = [
         logo_src: `${process.env.PUBLIC_URL}/images/reactjs.png`,
       },
       {
+        name: "NextJS",
+        logo_src: `${process.env.PUBLIC_URL}/images/nextjs.png`,
+      },
+      {
+        name: "Gatsby",
+        logo_src: `${process.env.PUBLIC_URL}/images/gatsby.png`,
+      },
+      {
         name: "TypeScript",
         logo_src: `${process.env.PUBLIC_URL}/images/ts.png`,
       },
@@ -54,6 +62,10 @@ export const TECH_STACK_MAP = [
       {
         name: "Netlify",
         logo_src: `${process.env.PUBLIC_URL}/images/netlify.png`,
+      },
+      {
+        name: "Vercel",
+        logo_src: `${process.env.PUBLIC_URL}/images/vercel.png`,
       },
       {
         name: "Travis CI",

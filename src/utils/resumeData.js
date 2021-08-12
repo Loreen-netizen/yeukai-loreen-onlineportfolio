@@ -36,12 +36,14 @@ export const Projects = [
     logo_src: `${process.env.PUBLIC_URL}/images/dinner.png`,
     title: "Eazy-meals PWA",
     caption: `Get meal ideas for any day or occasion`,
-    description: `I collaborated with a team of 3 other interns on this ReactJS project. We did competition analysis, 
-    generating personas and user stories, creating click 
-     through prototypes on Figma, version control with GitHub and Git, using GraphCMS as our API which relies on GraphQL 
-     as its API query language and runtime. We fetched our API data and stored it locally on Indexed DB and we used Fuana 
-     DB as our remote database.
-     We implemented a service worker and precached assets to allow for user friendly offline user experience.`,
+    description: ` I collaborated with a team of 3 other interns on this ReactJS project.
+
+We did competition analysis, generating personas and user stories, creating click through prototypes on
+Figma, version control with GitHub and Git, using GraphCMS as our API which relies on GraphQL as its API query 
+language and runtime. We used Material UI for styling and implemented react hooks and components in our code. We 
+fetched our API data and stored it locally on Indexed DB and we used Fuana DB as our remote database. We implemented
+ a service worker and precached assets to allow for user friendly
+ offline user experience. We deployed our app to Netlify.`,
     links: [
       {
         link: "https://github.com/Team-Eazy-Meal-Two/new-eazy-meals",

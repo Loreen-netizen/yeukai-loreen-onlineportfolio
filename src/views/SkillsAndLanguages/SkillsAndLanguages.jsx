@@ -60,7 +60,7 @@ const StyledContainer = styled(Grid)`
   }
 `;
 const StyledLogo = styled.img`
-  height: 62px;
+  height: 45px;
   width: auto;
   border-radius: 50%;
 `;

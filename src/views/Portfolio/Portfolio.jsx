@@ -23,10 +23,10 @@ export const Portfolio = () => {
  const [projectDialog, setprojectDialog] = useState(false);
 
 const StyledLink = styled.a`
-  color: pink;
-  cursor:pointer;
+  color: #f962a6;
+  cursor: pointer;
   &: hover {
-    color: #F962A6;
+    color: #b10653;
   }
 `;
 const StyledTypographyDescription = styled(Typography)`
