@@ -25,14 +25,7 @@ const StyledNavLink = styled(Nav.Link)`
   && {
     font-weight: 500;
     color: rgba(0,0,0,.55);
-  //   &:hover {
-  //     background: #ffb6c1;
-  //   }
-  //   &:active {
-  //     color: ${tokens.colors.flickrPink};
-  //   }
-  // }
-`;
+  }`;
 
 const StyledHomeOutlined = styled(HomeRounded)`
   && {

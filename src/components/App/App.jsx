@@ -8,7 +8,7 @@ import Resume from "../../views/Resume";
 import SkillsAndLanguages from "../../views/SkillsAndLanguages";
 import Footer from "../Footer";
 import ContactMe from "../../views/ContactMe";
-import "./App.css"
+import "./App.css";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
