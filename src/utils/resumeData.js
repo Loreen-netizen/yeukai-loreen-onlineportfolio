@@ -1,5 +1,6 @@
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkIcon from "@material-ui/icons/Link";
 
 
 export const RESUME_DATA = {
@@ -31,6 +32,27 @@ export const RESUME_DATA = {
 
 
 export const Projects = [
+  {
+    tag: "Next.js",
+    logo_src: `${process.env.PUBLIC_URL}/images/statistic.png`,
+    title: "Covid-Stats Next.js App",
+    caption: `View current covid statistics in South Africa`,
+    description: `This is a  nextjs app, hosted on vercel with github integration.
+
+This  app uses a free remote API to access daily covid statistics for South Africa. It also renders daily
+data updates for all 9 provinces. It uses next.js and is hosted on vercel. I used material-ui/grid for tabulating my data
+and  moment.js to parse, validate, manipulate and display my date and time values.`,
+    links: [
+      {
+        link: "https://covid-stats-next-js-app.vercel.app/",
+        icon: <LinkIcon />,
+      },
+      {
+        link: "https://github.com/Loreen-netizen/covid-stats-next.js-app",
+        icon: <GitHubIcon />,
+      },
+    ],
+  },
   {
     tag: "React",
     logo_src: `${process.env.PUBLIC_URL}/images/dinner.png`,

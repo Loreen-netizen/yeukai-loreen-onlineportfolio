@@ -25,6 +25,7 @@ export const Portfolio = () => {
 const StyledLink = styled.a`
   color: #f962a6;
   cursor: pointer;
+  font-size: 30px;
   &: hover {
     color: #b10653;
   }
@@ -48,7 +49,6 @@ const StyledDialogImage = styled.img`
   margin-left:40%;
 `;
 
- 
   return (
     <Grid className="section pb_45 pt_45" spacing={1}>
       {/* title */}
