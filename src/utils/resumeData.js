@@ -42,7 +42,7 @@ export const Projects = [
     tag: "Next.js",
     logo_src: `${process.env.PUBLIC_URL}/images/statistic.png`,
     title: "Covid-Stats Next.js App",
-    caption: `View current covid statistics in South Africa`,
+    caption: `See Covid statistics for South Africa`,
     description: `This is a  nextjs app, hosted on vercel with github integration.
 
 This  app uses a free remote API to access daily covid statistics for South Africa. It also renders daily
@@ -84,7 +84,7 @@ fetched our API data and stored it locally on Indexed DB and we used Fuana DB as
     tag: "React",
     logo_src: `${process.env.PUBLIC_URL}/images/to-do-list.png`,
     title: "To Do List PWA",
-    caption: `Plan your daily tasks`,
+    caption: `Plan your daily tasks, check when complete`,
     description: `The goal of this app was to learn how create a react project and deploy it to netlify.
     I learnt how to set up a react project, used material UI for my CSS and storybook for for building UI components 
     and pages in isolation. `,
@@ -120,7 +120,7 @@ fetched our API data and stored it locally on Indexed DB and we used Fuana DB as
     tag: "Express-NodeJS",
     logo_src: `${process.env.PUBLIC_URL}/images/car (1).png`,
     title: "Registration Numbers Web App",
-    caption: `Keep track of registration numbers`,
+    caption: `Keep track of car registration numbers`,
     description: `For the registration numbers web application, skills I  used included creating a web page using CSS, 
 HTML and JavaScript. Using PostgreSQL to create a database. Querying my database using Structured
  Query Language and deploying my web application to Heroku and using Travis CI for continuous integration.
@@ -138,7 +138,7 @@ I learnt how to use the Bootstrap 4 Content Delivery Network for my CSS.`,
     tag: "Express-NodeJS",
     logo_src: `${process.env.PUBLIC_URL}/images/serving.png`,
     title: "Waiter Time Table Web App",
-    caption: `Allows waiters to select work shifts in advance`,
+    caption: `Allows waiters to pick work shifts in advance`,
     description: `The objective of the application was to create a web application that allows a coffee shop owner
      to view shifts 
 scheduled by waiters for the week. The web application allows the shop owner to see the number of waiters 

@@ -47,6 +47,7 @@ export const Portfolio = () => {
     height: 60px;
     width: 60px;
     margin-left: 40%;
+  
   `;
 
   return (

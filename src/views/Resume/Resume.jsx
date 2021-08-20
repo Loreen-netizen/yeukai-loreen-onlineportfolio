@@ -1,17 +1,15 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import { Grid, Typography } from "@material-ui/core";
 import { RESUME_DATA } from "../../utils/resumeData";
-import {
-  EDUCATION_MAP,
-  WORK_EXPERIENCE_MAP,
-} from "../../utils/skillsAndLanguages";
+import { EDUCATION_MAP, WORK_EXPERIENCE_MAP} from "../../utils/skillsAndLanguages";
 import { TimeLine } from "../../components/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import WorkOutlineOutlinedIcon from "@material-ui/icons/WorkOutlineOutlined";
 import SchoolOutlinedIcon from "@material-ui/icons/SchoolOutlined";
 import { CustomTimeLineSeperator } from "../../components/Timeline/TimeLine";
 import TimelineContent from "@material-ui/lab/TimelineContent";
-import styled from "styled-components";
+
 
 const StyledWorkOutlineOutlinedIcon = styled(WorkOutlineOutlinedIcon)`
   && {
