@@ -108,7 +108,8 @@ export const WORK_EXPERIENCE_MAP = [
     company: "Project Codex, Cape Town",
     date: "January to February 2021",
     description1: `Mentoring 2021 Online and `,
-    description2: `OnSite bootcamp candidates on Javascript coding challenges. Assisting with daily setup and administrative work. Responding to candidate questions and guiding candidates to
+    description2: `OnSite bootcamp candidates on Javascript coding challenges. Assisting with daily setup and administrative work. 
+        Responding to candidate questions and guiding candidates to
         find solutions, (explain concepts without providing answers). Promoting an enquiry mindset and identifying candidates that
         needed extra assistance. Providing feedback on candidates on a weekly basis`,
   },
@@ -118,7 +119,8 @@ export const WORK_EXPERIENCE_MAP = [
     company: "Zest Polyurethanes, Cape Town",
     date: "May to September 2017",
     description1: "Laboratory maintenance, quality control,",
-    description2: ` research and development and paint formulation. Signing product release forms, monitoring batch quality and dealing with c;ient enquiries on product technicalities`,
+    description2: ` research and development and paint formulation. 
+    Signing product release forms, monitoring batch quality and dealing with client enquiries on product technicalities`,
   },
 
   {
@@ -167,7 +169,7 @@ export const EDUCATION_MAP = [
     year: "September 2011 - May 2015",
   },
   {
-    name: "Advanced Level Chemistry, Biology And Chemistry",
+    name: "Advanced Level Chemistry, Biology And Food Science",
     description: "Mtshabezi High School",
     location: "Bulawayo Zimbabwe",
     year: "2010",

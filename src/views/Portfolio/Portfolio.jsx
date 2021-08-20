@@ -12,42 +12,42 @@ import {
   DialogTitle,
   DialogContent,
   Dialog,
-  DialogActions
+  DialogActions,
 } from "@material-ui/core";
 import { Projects } from "../../utils/resumeData";
 import "./Portfolio.css";
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Portfolio = () => {
   const [tabValue, setTabValue] = useState("All");
- const [projectDialog, setprojectDialog] = useState(false);
+  const [projectDialog, setprojectDialog] = useState(false);
 
-const StyledLink = styled.a`
-  color: #f962a6;
-  cursor: pointer;
-  font-size: 30px;
-  &: hover {
-    color: #b10653;
-  }
-`;
-const StyledTypographyDescription = styled(Typography)`
-  && {
-    color: gray;
-    font-size: small;
-  }
-`;
-const StyledDialogTitle = styled(DialogTitle)`
-  && {
-    font-size: 12px;
-    font-weight: 500;
-    color: #f83a90;
-  }
-`;
-const StyledDialogImage = styled.img`
-  height: 60px;
-  width: 60px;
-  margin-left:40%;
-`;
+  const StyledLink = styled.a`
+    color: #f962a6;
+    cursor: pointer;
+    font-size: 30px;
+    &: hover {
+      color: #b10653;
+    }
+  `;
+  const StyledTypographyDescription = styled(Typography)`
+    && {
+      color: gray;
+      font-size: small;
+    }
+  `;
+  const StyledDialogTitle = styled(DialogTitle)`
+    && {
+      font-size: 12px;
+      font-weight: 500;
+      color: #f83a90;
+    }
+  `;
+  const StyledDialogImage = styled.img`
+    height: 60px;
+    width: 60px;
+    margin-left: 40%;
+  `;
 
   return (
     <Grid className="section pb_45 pt_45" spacing={1}>
