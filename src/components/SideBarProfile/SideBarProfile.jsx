@@ -155,7 +155,7 @@ export const SideBarProfile = () => {
         </CustomTimeLine>
         <ButtonDiv>
           <StyledLink
-            href={`${process.env.PUBLIC_URL}/images/Yeukai Loreen Muusha CV.pdf`}
+            href={`${process.env.PUBLIC_URL}/images/Yeukai Loreen Muusha CV - November compressed.pdf`}
             download
             target="_blank"
           >
